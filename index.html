@@ -12,26 +12,15 @@
 <!--<a-scene background="color: #AAB" fog="type: linear; color: #AAB; far: 30; near: 0">-->
     <a-scene background="color: #AAB">
 
-        <a-assets>
-            <img id="space" src="assets/texturemap/Space.png">
-            <img id="earth" src="https://raw.githubusercontent.com/MikeyBoss/designforanotherworld/master/assets/texturemap/Earth.jpg">
-            <img id="jupiter" src="assets/texturemap/Jupiter.png">
-            <img id="mars" src="assets/texturemap/mars.png">
-            <img id="mercury" src="assets/texturemap/mercury.png">
-            <img id="neptune" src="assets/texturemap/neptune.png">
-            <img id="saturn" src="assets/texturemap/Saturn.png">
-            <img id="uranus" src="assets/texturemap/uranus.png">
-            <img id="venus" src="assets/texturemap/venus.png">
-        </a-assets>
-
-        <a-sphere src="#earth" radius="2">
+        <a-sphere src="https://raw.githubusercontent.com/MikeyBoss/designforanotherworld/master/assets/texturemap/Earth.png" radius="2" rotation="0 45 0">
             <a-animation attribute="rotation"
                 dur="10000"
                 to="0 360 0"
-                ease="linear"
                 repeat="indefinite">
             </a-animation>
         </a-sphere>
+
+        <a-sky src="https://raw.githubusercontent.com/MikeyBoss/designforanotherworld/master/assets/texturemap/Space.png"></a-sky>
 
     </a-scene>
 </body>

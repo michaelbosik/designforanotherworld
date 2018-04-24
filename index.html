@@ -11,11 +11,21 @@
 <body>
     <a-scene>
 
-        <a-sphere src="https://raw.githubusercontent.com/MikeyBoss/designforanotherworld/master/assets/texturemap/Earth2.png" radius="2" rotation="0 10 0">
+        <a-sphere src="https://raw.githubusercontent.com/MikeyBoss/designforanotherworld/master/assets/texturemap/Earth2.png" radius="0.3" rotation="0 10 0" position="-10 3 -10">
             <a-animation attribute="rotation"
                 dur="50000"
                 from="0 0 0"
                 to="0 360 0"
+                easing="linear"
+                repeat="indefinite">
+            </a-animation>
+        </a-sphere>
+
+        <a-sphere src="https://raw.githubusercontent.com/MikeyBoss/designforanotherworld/master/assets/texturemap/Sun.jpg" radius="5" rotation="0 10 0" position="0 0 -10">
+            <a-animation attribute="rotation"
+                dur="600000"
+                from="0 0 0"
+                to="0 -360 0"
                 easing="linear"
                 repeat="indefinite">
             </a-animation>

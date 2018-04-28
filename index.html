@@ -50,16 +50,30 @@
         <a-sphere src="https://raw.githubusercontent.com/MikeyBoss/designforanotherworld/master/assets/texturemap/Saturn.png" radius="1.5" position="-29 0 -20">
             <a-animation attribute="rotation" dur="80000" from="0 0 0" to="0 360 0" easing="linear" repeat="indefinite"></a-animation>
         </a-sphere>
-        
-        <!-- Neptune -->
-        <a-sphere src="https://raw.githubusercontent.com/MikeyBoss/designforanotherworld/master/assets/texturemap/uranus.png" radius=".5" position="-33 0 -20">
-            <a-animation attribute="rotation" dur="80000" from="0 0 0" to="0 360 0" easing="linear" repeat="indefinite"></a-animation>
-        </a-sphere>
+
+        <!-- Saturn Rings -->
+        <a-ring color="#ABA" radius="2" position="-29 0 -20">
+
+        </a-ring>
         
         <!-- Uranus -->
+        <a-sphere src="https://raw.githubusercontent.com/MikeyBoss/designforanotherworld/master/assets/texturemap/uranus.png" radius=".5" position="-33 0 -20">
+            <a-animation attribute="rotation" dur="80000" from="0 0 0" to="360 0 0" easing="linear" repeat="indefinite"></a-animation>
+        </a-sphere>
+        
+        <!-- Neptune -->
         <a-sphere src="https://raw.githubusercontent.com/MikeyBoss/designforanotherworld/master/assets/texturemap/neptune.png" radius="0.6" position="-36 0 -20">
             <a-animation attribute="rotation" dur="50000" from="0 0 0" to="0 360 0" easing="linear" repeat="indefinite"></a-animation>
         </a-sphere>
+
+        <!-- Pluto -->
+        <a-sphere src="https://raw.githubusercontent.com/MikeyBoss/designforanotherworld/master/assets/texturemap/mercury.png" radius=".07" position="-38 0 -20">
+            <a-animation attribute="rotation" dur="800000" from="0 0 0" to="0 360 0" easing="linear" repeat="indefinite"></a-animation>
+        </a-sphere>
+
+        <a-camera>
+        <a-entity raycaster="far: 30; objects: .intersectable" cursor geometry="primitive: ring; radiusOuter: 0.015; radiusInner: 0.01; segmentsTheta: 32" material="color: #FFF; shader: flat" position="0 0 -0.75"></a-entity>
+        </a-camera>
 
         <a-sky src="https://raw.githubusercontent.com/MikeyBoss/designforanotherworld/master/assets/texturemap/Space4k.jpg"></a-sky>
 

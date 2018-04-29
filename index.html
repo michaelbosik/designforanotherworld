@@ -11,68 +11,98 @@
 <body>
     <a-scene>
 
-        <!-- Earth -->
-        <a-sphere src="https://raw.githubusercontent.com/MikeyBoss/designforanotherworld/master/assets/texturemap/Earth2.png" radius="0.3" rotation="0 10 0" position="-17.5 0 -20">
-            <a-animation attribute="rotation" dur="50000" from="0 0 0" to="0 360 0" easing="linear" repeat="indefinite"></a-animation>
-        </a-sphere>
-        
-        <!-- Moon -->
-        <a-sphere src="https://raw.githubusercontent.com/MikeyBoss/designforanotherworld/master/assets/texturemap/Moon.jpg" radius=".1" position="-18 0.1 -20">
-            <a-animation attribute="rotation" dur="50000" from="0 0 0" to="0 360 0" easing="linear" repeat="indefinite"></a-animation>
-        </a-sphere>
-
         <!-- Sun -->
         <a-sphere src="https://raw.githubusercontent.com/MikeyBoss/designforanotherworld/master/assets/texturemap/Sun.jpg" radius="10" rotation="0 10 0" position="0 0 -20">
             <a-animation attribute="rotation" dur="500000" from="0 0 0" to="0 360 0" easing="linear" repeat="indefinite"></a-animation>
-        </a-sphere>
-        
-        <!-- Mars -->
-        <a-sphere src="https://raw.githubusercontent.com/MikeyBoss/designforanotherworld/master/assets/texturemap/Mars.jpg" radius="0.35" position="-20 0 -20">
-            <a-animation attribute="rotation" dur="60000" from="0 0 0" to="0 360 0" easing="linear" repeat="indefinite"></a-animation>
-        </a-sphere>
-        
-        <!-- Mercury -->
-        <a-sphere src="https://raw.githubusercontent.com/MikeyBoss/designforanotherworld/master/assets/texturemap/mercury.png" radius="0.25" position="-13 0 -20">
-            <a-animation attribute="rotation" dur="1000" from="0 0 0" to="0 360 0" easing="linear" repeat="indefinite"></a-animation>
-        </a-sphere>
-        
-        <!-- Venus -->
-        <a-sphere src="https://raw.githubusercontent.com/MikeyBoss/designforanotherworld/master/assets/texturemap/Venus.jpg" radius="0.4" position="-15 0 -20">
-            <a-animation attribute="rotation" dur="10000" from="0 0 0" to="0 360 0" easing="linear" repeat="indefinite"></a-animation>
-        </a-sphere>
-        
-        <!-- Jupiter -->
-        <a-sphere src="https://raw.githubusercontent.com/MikeyBoss/designforanotherworld/master/assets/texturemap/Jupiter.png" radius="1.8" position="-24 0 -20">
-            <a-animation attribute="rotation" dur="100000" from="0 0 0" to="0 360 0" easing="linear" repeat="indefinite"></a-animation>
-        </a-sphere>
-        
-        <!-- Saturn -->
-        <a-sphere src="https://raw.githubusercontent.com/MikeyBoss/designforanotherworld/master/assets/texturemap/Saturn.png" radius="1.5" position="-29 0 -20">
-            <a-animation attribute="rotation" dur="80000" from="0 0 0" to="0 360 0" easing="linear" repeat="indefinite"></a-animation>
+            <a-animation attribute="" begin="click"></a-animation>
         </a-sphere>
 
+        <!-- Earth -->
+        <a-entity position="0 0 -20">
+            <a-animation attribute="rotation" to="0 360 0" dur="200000" easing="linear" repeat="indefinite"></a-animation>
+            <a-sphere src="https://raw.githubusercontent.com/MikeyBoss/designforanotherworld/master/assets/texturemap/Earth2.png" radius="0.3" position="-17.5 0 0">
+                <a-animation attribute="rotation" dur="50000" from="0 0 0" to="0 360 0" easing="linear" repeat="indefinite"></a-animation>
+                <!-- Moon -->
+                <a-entity position="0 0 0">
+                    <a-animation attribute="rotation" dur="5000" from="0 0 0" to="0 360 0" easing="linear" repeat="indefinite"></a-animation>
+                    <a-sphere src="https://raw.githubusercontent.com/MikeyBoss/designforanotherworld/master/assets/texturemap/Moon.jpg" radius=".1" position="-.5 0 0">
+                        <a-animation attribute="rotation" dur="50000" from="0 0 0" to="0 360 0" easing="linear" repeat="indefinite"></a-animation>
+                    </a-sphere>
+                </a-entity>
+            </a-sphere>
+        </a-entity>
+        
+        <!-- Mars -->
+        <a-entity position="0 0 -20">
+            <a-animation attribute="rotation" to="0 360 0" dur="300000" easing="linear" repeat="indefinite"></a-animation>
+            <a-sphere src="https://raw.githubusercontent.com/MikeyBoss/designforanotherworld/master/assets/texturemap/Mars.jpg" radius="0.35" position="-20 0 0">
+                <a-animation attribute="rotation" dur="60000" from="0 0 0" to="0 360 0" easing="linear" repeat="indefinite"></a-animation>
+            </a-sphere>
+        </a-entity>
+        
+        <!-- Mercury -->
+        <a-entity position="0 0 -20">
+            <a-animation attribute="rotation" to="0 360 0" dur="10000" easing="linear" repeat="indefinite"></a-animation>
+            <a-sphere src="https://raw.githubusercontent.com/MikeyBoss/designforanotherworld/master/assets/texturemap/mercury.png" radius="0.25" position="-13 0 0">
+                <a-animation attribute="rotation" dur="10000" from="0 0 0" to="0 360 0" easing="linear" repeat="indefinite"></a-animation>
+            </a-sphere>
+        </a-entity>
+        
+        <!-- Venus -->
+        <a-entity position="0 0 -20">
+            <a-animation attribute="rotation" to="0 360 0" dur="100000" easing="linear" repeat="indefinite"></a-animation>
+            <a-sphere src="https://raw.githubusercontent.com/MikeyBoss/designforanotherworld/master/assets/texturemap/Venus.jpg" radius="0.4" position="-15 0 0">
+                <a-animation attribute="rotation" dur="10000" from="0 0 0" to="0 360 0" easing="linear" repeat="indefinite"></a-animation>
+            </a-sphere>
+        </a-entity>
+
+        <!-- Jupiter -->
+        <a-entity position="0 0 -20">
+            <a-animation attribute="rotation" to="0 360 0" dur="500000" easing="linear" repeat="indefinite"></a-animation>
+            <a-sphere src="https://raw.githubusercontent.com/MikeyBoss/designforanotherworld/master/assets/texturemap/Jupiter.png" radius="1.8" position="-24 0 0">
+                <a-animation attribute="rotation" dur="100000" from="0 0 0" to="0 360 0" easing="linear" repeat="indefinite"></a-animation>
+            </a-sphere>
+        </a-entity>
+        
+        <!-- Saturn -->
+        <a-entity position="0 0 -20">
+            <a-animation attribute="rotation" to="0 360 0" dur="305000" easing="linear" repeat="indefinite"></a-animation>
+            <a-sphere src="https://raw.githubusercontent.com/MikeyBoss/designforanotherworld/master/assets/texturemap/Saturn.png" radius="1.5" position="-29 0 0">
+                <a-animation attribute="rotation" dur="80000" from="0 0 0" to="0 360 0" easing="linear" repeat="indefinite"></a-animation>
+            </a-sphere>
+        </a-entity>
+
         <!-- Saturn Rings -->
-        <a-ring color="#ABA" radius="2" position="-29 0 -20">
+        <a-ring color="#ABA" radius="4" position="-29 0 -20">
 
         </a-ring>
         
         <!-- Uranus -->
-        <a-sphere src="https://raw.githubusercontent.com/MikeyBoss/designforanotherworld/master/assets/texturemap/uranus.png" radius=".5" position="-33 0 -20">
-            <a-animation attribute="rotation" dur="80000" from="0 0 0" to="360 0 0" easing="linear" repeat="indefinite"></a-animation>
-        </a-sphere>
-        
+        <a-entity position="0 0 -20">
+            <a-animation attribute="rotation" to="0 360 0" dur="105000" easing="linear" repeat="indefinite"></a-animation>
+            <a-sphere src="https://raw.githubusercontent.com/MikeyBoss/designforanotherworld/master/assets/texturemap/uranus.png" radius=".5" position="-33 0 0">
+                <a-animation attribute="rotation" dur="80000" from="0 0 0" to="360 0 0" easing="linear" repeat="indefinite"></a-animation>
+            </a-sphere>
+        </a-entity>
+
         <!-- Neptune -->
-        <a-sphere src="https://raw.githubusercontent.com/MikeyBoss/designforanotherworld/master/assets/texturemap/neptune.png" radius="0.6" position="-36 0 -20">
-            <a-animation attribute="rotation" dur="50000" from="0 0 0" to="0 360 0" easing="linear" repeat="indefinite"></a-animation>
-        </a-sphere>
+        <a-entity position="0 0 -20">
+            <a-animation attribute="rotation" to="0 360 0" dur="205000" easing="linear" repeat="indefinite"></a-animation>
+            <a-sphere src="https://raw.githubusercontent.com/MikeyBoss/designforanotherworld/master/assets/texturemap/neptune.png" radius="0.6" position="-36 0 0">
+                <a-animation attribute="rotation" dur="50000" from="0 0 0" to="0 360 0" easing="linear" repeat="indefinite"></a-animation>
+            </a-sphere>
+        </a-entity>
 
         <!-- Pluto -->
-        <a-sphere src="https://raw.githubusercontent.com/MikeyBoss/designforanotherworld/master/assets/texturemap/mercury.png" radius=".07" position="-38 0 -20">
-            <a-animation attribute="rotation" dur="800000" from="0 0 0" to="0 360 0" easing="linear" repeat="indefinite"></a-animation>
-        </a-sphere>
+        <a-entity position="0 0 -20">
+            <a-animation attribute="rotation" to="0 360 0" dur="800000" easing="linear" repeat="indefinite"></a-animation>
+            <a-sphere src="https://raw.githubusercontent.com/MikeyBoss/designforanotherworld/master/assets/texturemap/mercury.png" radius=".07" position="-38 0 0">
+                <a-animation attribute="rotation" dur="800000" from="0 0 0" to="0 360 0" easing="linear" repeat="indefinite"></a-animation>
+            </a-sphere>
+        </a-entity>
 
         <a-camera>
-        <a-entity raycaster="far: 30; objects: .intersectable" cursor geometry="primitive: ring; radiusOuter: 0.015; radiusInner: 0.01; segmentsTheta: 32" material="color: #FFF; shader: flat" position="0 0 -0.75"></a-entity>
+            <a-entity raycaster="far: 30; objects: .intersectable" cursor geometry="primitive: ring; radiusOuter: 0.015; radiusInner: 0.01; segmentsTheta: 32" material="color: #FFF; shader: flat" position="0 0 -0.75"></a-entity>
         </a-camera>
 
         <a-sky src="https://raw.githubusercontent.com/MikeyBoss/designforanotherworld/master/assets/texturemap/Space4k.jpg"></a-sky>

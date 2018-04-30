@@ -6,13 +6,26 @@
     <title>Another World - Group 1</title>
     <meta name="description" content="Group 1 Another World">
     <script src="aframe/aframe-master.min.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script>
+
+    <script>
+            AFRAME.registerComponent('open-text', {
+                init: function () {
+                    this.el.addEventListener('click', function (evt) {
+                        this.setAttribute('material', 'color', newColor);
+                        console.log('I was clicked at: ', evt.detail.intersection.point, " and my the sphere was "+sphere);
+                    });
+                }
+            });
+    </script>
 </head>
 
 <body>
+
     <a-scene>
 
         <!-- Sun -->
-        <a-sphere src="https://raw.githubusercontent.com/MikeyBoss/designforanotherworld/master/assets/texturemap/Sun.jpg" radius="10" rotation="0 10 0" position="0 0 -20">
+        <a-sphere open-text='' src="https://raw.githubusercontent.com/MikeyBoss/designforanotherworld/master/assets/texturemap/Sun.jpg" radius="10" position="0 0 -20">
             <a-animation attribute="rotation" dur="500000" from="0 0 0" to="0 360 0" easing="linear" repeat="indefinite"></a-animation>
             <a-animation attribute="" begin="click"></a-animation>
         </a-sphere>
@@ -24,9 +37,9 @@
                 <a-animation attribute="rotation" dur="50000" from="0 0 0" to="0 360 0" easing="linear" repeat="indefinite"></a-animation>
                 <!-- Moon -->
                 <a-entity position="0 0 0">
-                    <a-animation attribute="rotation" dur="5000" from="0 0 0" to="0 360 0" easing="linear" repeat="indefinite"></a-animation>
-                    <a-sphere src="https://raw.githubusercontent.com/MikeyBoss/designforanotherworld/master/assets/texturemap/Moon.jpg" radius=".1" position="-.5 0 0">
-                        <a-animation attribute="rotation" dur="50000" from="0 0 0" to="0 360 0" easing="linear" repeat="indefinite"></a-animation>
+                    <a-animation attribute="rotation" dur="5000" from="0 0 0" to="0 -360 0" easing="linear" repeat="indefinite"></a-animation>
+                    <a-sphere src="https://raw.githubusercontent.com/MikeyBoss/designforanotherworld/master/assets/texturemap/Moon.jpg" radius=".1" rotation="0 0 180" position="-.5 0 0">
+                        <a-animation attribute="rotation" dur="25000" from="0 0 0" to="0 360 0" easing="linear" repeat="indefinite"></a-animation>
                     </a-sphere>
                 </a-entity>
             </a-sphere>
@@ -71,7 +84,7 @@
                 <a-animation attribute="rotation" dur="80000" from="0 0 0" to="0 360 0" easing="linear" repeat="indefinite"></a-animation>
             </a-sphere>
             <!-- Saturn Rings -->
-            <a-torus src="https://raw.githubusercontent.com/MikeyBoss/designforanotherworld/master/assets/texturemap/Rings.jpg" width=".01" radius-tubular=".1" radius="1.7" position="-29 0 0" rotation="45 0 0"></a-torus>
+            <a-ring src="https://raw.githubusercontent.com/MikeyBoss/designforanotherworld/master/assets/texturemap/Rings.jpg" height="10" radius-inner="1.7"  radius-outer="2.3" position="-29 0 0" rotation="-45 0 0"></a-ring>
         </a-entity>
 
         <!-- Uranus -->
